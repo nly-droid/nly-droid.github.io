@@ -1,0 +1,334 @@
+/* Mobile mode */
+/* Body */
+
+@font-face {
+    font-family: "Lato", Arial, sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+}
+body{
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 1em;
+    color: #000;
+    width: 100%;
+    margin: auto;
+}
+img{
+    width: 100%;
+    border-radius: 1.5em;
+}
+hr{
+    width: 75%;
+    text-align: center;
+    display: block;
+    margin: auto;
+    color: #08527D;
+    background-color: #08527D;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/* Links */
+
+a, a:link, a:visited{
+    display: block;
+    text-decoration: underline;
+    color: #2DB390;
+}
+.button:link, .button:visited{
+    display: block;
+    background-color: #FF9826;
+    border-radius: 1em;
+    margin: auto;
+    color: #08527D;
+    text-decoration: none;
+    padding: 0.5em;
+    text-align: center;
+    font-weight: bold;
+    width: 20%;
+}
+
+/* Heading */
+
+h1,h2,h3,h4{
+    font-family: "Raleway", Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #08527D;
+    text-align: center;
+}
+h2{
+    display: block;
+    font-weight: bolder;
+}
+h3{
+    padding: 1em 0;
+    display: block;
+    border: #000 thin solid;
+}
+
+/* Header */
+
+header{
+    background-color: #08527D;
+    color: #fff;
+    min-height: 3em;
+}
+#logo{
+    width: 40%;
+    display: block;
+    margin: auto;
+    padding: 1em 0;
+}
+
+/* Main navigation */
+
+nav ul li{
+    list-style-type: none;
+}
+#main-nav ul{
+    background-color: #2DB390;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+#main-nav ul li a, #main-nav ul li a:link {
+    display: block;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1em 0;
+}
+#main-nav a:hover, #main-nav a:active{
+    display: block;
+    background-color: black;
+}
+
+/* Secondary navigation */
+
+#secondary-nav a, #secondary-nav a:link{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1em 4.5em 1em 2em;
+    font-size: 1.3em;
+    text-transform: uppercase;
+}
+
+/* Feature area */
+
+#feature-area{
+    position: relative;
+    margin: 0 auto;
+}
+#feature-content{
+    position: absolute;
+    width: 100%;
+    bottom: 2em;
+    background: rgb(0, 0, 0);
+    background: rgba(45, 179, 144, 0.8);
+    color: #000;
+    padding: 1em 0;
+    text-align: center;
+    font-size: 70%;
+}
+#background{
+    width: 100%;
+    height: 80%;
+    border-radius: 0;
+}
+
+/* Main */
+
+main{
+    padding: 1em;
+}
+main section, article, div{
+    margin: 2em 0;
+    text-align: justify;
+}
+main h2{
+    padding-top: 2em;
+}
+address{
+    text-align: center;
+}
+.contact{
+    width: 30%;
+    display: block;
+    margin: auto;
+}
+.team-member{
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+main article p{
+    background: rgb(0, 0, 0);
+    background: rgba(45, 179, 144, 0.3);
+    border-radius: 2em 2em 0 0;
+}
+main p{
+    padding: 1em 1em;
+}
+.hide{
+    display: none;
+}
+.cost-target, .schedule p{
+    display: block;
+    text-align: center;
+    background: rgb(0, 0, 0);
+    background: rgba(45, 179, 144, 0.3);
+    border-radius: 2em 2em 0 0;
+    min-height: 7em;
+    line-height: 2em;
+}
+
+/* Footer */
+
+footer{
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 0.5em 0;
+}
+footer h4{
+    color: #fff;
+    text-align: left;
+}
+#footer-nav{
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-between;
+}
+#footer-nav ul{
+    padding: 0;
+    text-align: left;
+}
+/* Transition to tablet mode at 600px */
+@media screen and (min-width: 600px){
+    #main-nav{
+        position: sticky;
+        top: 0;
+    }
+    #main-nav ul{
+        min-height: 2em;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 0.5em;
+    }
+    #feature-area{
+        font-size: 170%;
+    }
+    #background{
+        width: 100%;
+        height: 15em;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    #feature-content{
+        bottom: 1em;
+    }
+    main p{
+        padding: 1em 1.5em;
+    }
+    #gallery-img{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 0.5em;
+    }
+    .change-order{
+        grid-row: 1/1;
+        grid-column: 2/-1;
+    }
+    .contact{
+        width: 15%;
+        display: block;
+        margin: auto;
+    }
+}
+/* Transition to desktop mode at 600px */
+@media screen and (min-width: 1000px){
+    body{
+        background-image: url("../img/just-waves.png");
+        background-color: #fff;
+        width: 80%;
+        border: #08527D thin solid;
+    }
+    main{
+        background-color: #fff;
+    }
+    #feature-content{
+        bottom: 7em;
+    }
+    #background{
+        height: 17em;
+    }
+    #gallery-img{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 0.3em;
+    }
+    .change-order{
+        grid-row: 1/5;
+    }
+    .hide{
+        display: block;
+    }
+    article img{
+        width: 40%;
+        height: auto;
+        float: left;
+        display: block;
+        padding-right: 20px;
+    }
+    article p::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+    main article p{
+        background: rgb(0, 0, 0);
+        background: rgba(45, 179, 144, 0.3);
+        border-radius: 1em;
+    }
+    .team{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
+        overflow: auto;
+    }
+    .team article{
+        width: 49%;
+    }
+    .team article p{
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+    .team-member{
+        width: 48%;
+        padding: 2em 0;
+    }
+    .contact{
+        width: 7%;
+        display: block;
+        margin: auto;
+    }
+    .schedule-cost{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 1em;
+    }
+}
+
+
+
+
+
